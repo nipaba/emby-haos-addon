@@ -1,0 +1,28 @@
+name: "Emby Server"
+version: "1.0"
+slug: "emby_server"
+description: "A custom add-on to run Emby Server"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+  - armhf
+  - i386
+startup: "services"
+boot: "auto"
+ports:
+  8096/tcp: 8096
+ports_description:
+  8096/tcp: "Web interface port for Emby server"
+options: {}
+schema: {}
+host_network: true
+map:
+  - media:rw
+  - config:rw
+  - ssl:rw
+  - share:rw
+  - addons:rw
+  - backup:rw
+image: "emby/embyserver:latest"
+timeout: 30
