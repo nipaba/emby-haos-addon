@@ -1,0 +1,15 @@
+{
+  "name": "Minimal Add-on",
+  "version": "1.0",
+  "slug": "embyserver",
+  "description": "A minimal viable HAOS add-on",
+  "arch": ["armv7", "armhf", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "8096/tcp": 8096
+  },
+  "webui": "http://[HOST]:[PORT:80]",
+  "ingress": false,
+  "host_network": false
+}
